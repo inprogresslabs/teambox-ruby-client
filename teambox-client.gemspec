@@ -63,18 +63,18 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<httparty>, ["~> 0.12.0"])
-      s.add_runtime_dependency(%q<oauth2>, ["~> 0.9.2"])
-      s.add_runtime_dependency(%q<json>, ["~> 1.7.6"])
+      s.add_runtime_dependency(%q<httparty>, ["~> 0.12"])
+      s.add_runtime_dependency(%q<oauth2>, ["~> 0.9"])
+      s.add_runtime_dependency(%q<json>, ["~> 1.8"])
     else
-      s.add_dependency(%q<httparty>, ["~> 0.12.4"])
-      s.add_dependency(%q<oauth2>, ["~> 0.9.2"])
-      s.add_dependency(%q<json>, ["~> 1.7.6"])
+      s.add_dependency(%q<httparty>, ["~> 0.12"])
+      s.add_dependency(%q<oauth2>, ["~> 0.9"])
+      s.add_dependency(%q<json>, ["~> 1.8"])
     end
   else
     s.add_dependency(%q<httparty>, ["~> 0.12.0"])
-    s.add_dependency(%q<oauth2>, ["~> 0.9.2"])
-    s.add_dependency(%q<json>, ["~> 1.7.6"])
+    s.add_dependency(%q<oauth2>, ["~> 0.9"])
+    s.add_dependency(%q<json>, ["~> 1.8"])
   end
 end
 
