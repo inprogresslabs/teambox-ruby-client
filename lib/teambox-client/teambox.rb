@@ -66,7 +66,7 @@ module Teambox
     # Returns the URL required to authenticate access if using OAuth
     def authorize_url(opts={})
       if oauth?
-        @consumer.web_server.authorize_url({:redirect_uri => @auth[:redirect_uri]}.merge(opts))
+        @consumer.authorize_url({redirect_uri: @auth[:redirect_uri],response_type: 'code', scope: @auth[:scope], client_id: @auth[:oauth_app_id] })
       else
         nil
       end

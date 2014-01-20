@@ -24,7 +24,8 @@ module Teambox
     end
     
     def authorize_from_request(verifier)
-      @access_token = consumer.web_server.get_access_token(verifier, :redirect_uri => @auth[:redirect_uri], :grant_type => 'authorization_code')
+      consumer.auth_code.authorize_url( :redirect_uri => @auth[:redirect_uri] )
+      @access_token = consumer.auth_code.get_token(verifier)
       @auth[:oauth_token] = @access_token.token
       @access_token
     end
